@@ -1,0 +1,17 @@
+#!/usr/bin/env php
+
+<?php
+
+use CodeIgniter\Console\Command\MakeControllerCommand;
+use CodeIgniter\Console\Command\MakeModelCommand;
+use Symfony\Component\Console\Application;
+
+require './vendor/autoload.php';
+
+$app = new Application('CodeIgniter Console', '1.0.0');
+
+$app->add(new MakeControllerCommand());
+$app->add(new MakeModelCommand());
+
+$app->run();
+

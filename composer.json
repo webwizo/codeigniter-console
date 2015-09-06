@@ -1,0 +1,23 @@
+{
+	"name": "webwizo/codeigniter-console",
+	"description": "CodeIgniter 3.x framework console",
+	"keywords": ["codeigniter"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Asif Iqbal",
+			"email": "webwizo@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"CodeIgniter\\Console\\": "src"
+		}
+	},
+	"require": {
+		"symfony/console": "~2.0"
+	},
+	"bin": [
+		"codeigniter"
+	]
+}
