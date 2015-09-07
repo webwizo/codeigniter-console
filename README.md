@@ -11,16 +11,16 @@ A CodeIgniter 3.x framework console.
 ### Getting Started
 If you successfully installed CodeIgniter, run this command:
 ```
-vendor/bin/codeigniter --help
+vendor/bin/codeigniter
 ```
 this will show you a default composer and installed packages command list.
 
-Create controller:
+* Create controller:
 ```
 vendor/bin/codeigniter make:controller <controller_name>
 ```
 
-Create model:
+* Create model:
 ```
 vendor/bin/codeigniter make:model <model_name> [--suffix=_model]
 ```
