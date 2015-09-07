@@ -47,7 +47,7 @@ class MakeModelCommand extends Command
 
 	private function make($model, $suffix, OutputInterface $output)
 	{
-		$stub = file_get_contents(dirname(__FILE__).'/stubs/controller.stub');
+		$stub = file_get_contents(dirname(__FILE__).'/stubs/model.stub');
 		$model = ucfirst($model) . $suffix;
 
 		$file = str_replace('{{class}}', ucfirst($model), $stub);
