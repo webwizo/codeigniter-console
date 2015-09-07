@@ -13,11 +13,18 @@ use Symfony\Component\Console\Output\OutputInterface;
 class MakeControllerCommand extends Command
 {
 	
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
+	/**
+	 * Configures the current command.
+	 * 
+	 */
 	protected function configure()
 	{
 		$this->setName('make:controller')
@@ -29,6 +36,12 @@ class MakeControllerCommand extends Command
 			);
 	}
 
+	/**
+	 * Executes the current command.
+	 * 
+	 * @param  InputInterface  $input 		An InputInterface instance
+	 * @param  OutputInterface $output 		An OutputInterface instance
+	 */
 	protected function execute(InputInterface $input, OutputInterface $output)
 	{
 		$name = $input->getArgument('name');
@@ -36,6 +49,12 @@ class MakeControllerCommand extends Command
 		$this->make($name, $output);
 	}
 
+	/**
+	 * Create a controller and placed into application/controllers
+	 * 
+	 * @param  [type]          $controller 	A controller name
+	 * @param  OutputInterface $output 		An OutputInterface instance
+	 */
 	private function make($controller, OutputInterface $output)
 	{
 		$stub = file_get_contents(dirname(__FILE__).'/stubs/controller.stub');

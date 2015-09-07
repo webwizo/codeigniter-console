@@ -14,11 +14,18 @@ use Symfony\Component\Console\Output\OutputInterface;
 class MakeModelCommand extends Command
 {
 	
+	/**
+	 * Constructor
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
+	/**
+	 * Configures the current command.
+	 * 
+	 */
 	protected function configure()
 	{
 		$this->setName('make:model')
@@ -36,6 +43,12 @@ class MakeModelCommand extends Command
 			);
 	}
 
+	/**
+	 * Executes the current command.
+	 * 
+	 * @param  InputInterface  $input 		An InputInterface instance
+	 * @param  OutputInterface $output 		An OutputInterface instance
+	 */
 	protected function execute(InputInterface $input, OutputInterface $output)
 	{
 		$name = $input->getArgument('name');
@@ -45,6 +58,13 @@ class MakeModelCommand extends Command
 		$this->make($name, $suffix, $output);
 	}
 
+	/**
+	 * Create a model and placed into application/models
+	 * 
+	 * @param  string          $model  		A model name
+	 * @param  string          $suffix 		Suffix for model name
+	 * @param  OutputInterface $output  	An OutputInterface instance
+	 */
 	private function make($model, $suffix, OutputInterface $output)
 	{
 		$stub = file_get_contents(dirname(__FILE__).'/stubs/model.stub');
