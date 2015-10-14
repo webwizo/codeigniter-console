@@ -26,11 +26,6 @@ vendor/bin/codeigniter make:controller <controller_name>
 vendor/bin/codeigniter make:model <model_name> [--suffix=_model]
 ```
 
-**Add Database library into Autoload**
-```
-$autoload['libraries'] = array('database');
-```
-
 ### License
 MIT
 
